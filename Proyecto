@@ -1,0 +1,84 @@
+export default function KefirWebPage() { return ( <main className="min-h-screen bg-white text-gray-800 p-6"> <header className="text-center py-10"> <h1 className="text-4xl font-bold text-green-700">Kéfir Freskaleche</h1> <p className="mt-4 text-xl">Tu salud comienza en tu digestión</p> </header>
+
+<section className="grid md:grid-cols-2 gap-10 py-10">
+    <div>
+      <h2 className="text-2xl font-semibold mb-4">¿Qué es el kéfir?</h2>
+      <p>
+        El kéfir es una bebida fermentada rica en probióticos que mejora tu digestión, fortalece tu sistema inmunológico y aporta nutrientes esenciales. Ideal para quienes buscan un estilo de vida saludable.
+      </p>
+    </div>
+    <img src="/kefir-bottle.png" alt="Kéfir Freskaleche" className="w-full rounded-xl shadow-md" />
+  </section>
+
+  <section className="py-10">
+    <h2 className="text-2xl font-semibold text-center mb-6">Nuestros sabores</h2>
+    <div className="grid md:grid-cols-3 gap-6">
+      {['Natural', 'Fresa', 'Mango'].map((sabor) => (
+        <div key={sabor} className="bg-green-50 p-4 rounded-xl shadow">
+          <h3 className="text-xl font-bold mb-2">Kéfir de {sabor}</h3>
+          <p>Delicioso sabor {sabor.toLowerCase()} en presentación de 250 ml y 500 ml.</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section className="py-10 bg-green-100 rounded-xl mt-10">
+    <h2 className="text-2xl font-semibold text-center mb-4">¿Dónde comprar?</h2>
+    <p className="text-center mb-4">Encuéntralo en supermercados Éxito, Olímpica, Rappi y tiendas locales en Bucaramanga.</p>
+    <div className="text-center">
+      <button className="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700">Ver mapa de puntos de venta</button>
+    </div>
+  </section>
+
+  <section className="py-10">
+    <h2 className="text-2xl font-semibold text-center mb-6">Testimonios</h2>
+    <div className="grid md:grid-cols-2 gap-6">
+      <blockquote className="bg-green-50 p-4 rounded-xl shadow italic">“Desde que empecé a tomar kéfir, mi digestión ha mejorado notablemente. ¡Lo recomiendo 100%!” – Laura M.</blockquote>
+      <blockquote className="bg-green-50 p-4 rounded-xl shadow italic">“Sabe delicioso y me siento con más energía durante el día. ¡Gracias Freskaleche!” – Andrés R.</blockquote>
+    </div>
+  </section>
+
+  <section className="py-10 bg-gray-50 rounded-xl">
+    <h2 className="text-2xl font-semibold text-center mb-6">Contáctanos</h2>
+    <form className="max-w-xl mx-auto space-y-4">
+      <input type="text" placeholder="Nombre" className="w-full p-2 border rounded" />
+      <input type="email" placeholder="Correo electrónico" className="w-full p-2 border rounded" />
+      <textarea placeholder="Mensaje" className="w-full p-2 border rounded h-24" />
+      <button type="submit" className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">Enviar</button>
+    </form>
+  </section>
+
+  <section className="py-10">
+    <h2 className="text-2xl font-semibold text-center mb-6">Recetas con Kéfir</h2>
+    <div className="grid md:grid-cols-2 gap-6">
+      <div className="bg-yellow-50 p-4 rounded-xl shadow">
+        <h3 className="text-xl font-bold mb-2">Smoothie de kéfir y frutas</h3>
+        <ul className="list-disc ml-5 text-sm">
+          <li>1 taza de kéfir natural</li>
+          <li>1 banano</li>
+          <li>1/2 taza de fresas</li>
+          <li>Miel al gusto</li>
+        </ul>
+        <p className="mt-2">Mezcla todo en la licuadora y sirve frío.</p>
+      </div>
+
+      <div className="bg-yellow-50 p-4 rounded-xl shadow">
+        <h3 className="text-xl font-bold mb-2">Aderezo cremoso con kéfir</h3>
+        <ul className="list-disc ml-5 text-sm">
+          <li>1/2 taza de kéfir natural</li>
+          <li>1 cucharada de mostaza Dijon</li>
+          <li>1 cucharadita de ajo en polvo</li>
+          <li>Sal y pimienta al gusto</li>
+        </ul>
+        <p className="mt-2">Ideal para ensaladas frescas o wraps.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer className="text-center text-sm text-gray-500 mt-10">
+    © 2025 Freskaleche. Todos los derechos reservados.
+  </footer>
+</main>
+
+); }
+
